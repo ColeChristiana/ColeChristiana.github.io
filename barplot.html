@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-871e6f8f4de2f7bdecc40c82bbd210ed"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Crm Cd Desc", "title": "Crime Type", "type": "nominal"}, "tooltip": [{"field": "Crm Cd Desc", "type": "nominal"}, {"field": "Age Group", "type": "ordinal"}, {"field": "Count", "type": "quantitative"}], "x": {"field": "Age Group", "title": "Victim Age Group", "type": "nominal"}, "y": {"field": "Count", "title": "Number of Crimes", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_1", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Top 5 Crime Types by Victim Age Group", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-871e6f8f4de2f7bdecc40c82bbd210ed": [{"Crm Cd Desc": "BURGLARY FROM VEHICLE", "Age Group": "0\u201317", "Count": 4}, {"Crm Cd Desc": "BURGLARY FROM VEHICLE", "Age Group": "18\u201324", "Count": 138}, {"Crm Cd Desc": "BURGLARY FROM VEHICLE", "Age Group": "25\u201334", "Count": 295}, {"Crm Cd Desc": "BURGLARY FROM VEHICLE", "Age Group": "35\u201349", "Count": 254}, {"Crm Cd Desc": "BURGLARY FROM VEHICLE", "Age Group": "50\u201364", "Count": 75}, {"Crm Cd Desc": "BURGLARY FROM VEHICLE", "Age Group": "65+", "Count": 40}, {"Crm Cd Desc": "THEFT FROM MOTOR VEHICLE - GRAND ($950.01 AND OVER)", "Age Group": "0\u201317", "Count": 1}, {"Crm Cd Desc": "THEFT FROM MOTOR VEHICLE - GRAND ($950.01 AND OVER)", "Age Group": "18\u201324", "Count": 56}, {"Crm Cd Desc": "THEFT FROM MOTOR VEHICLE - GRAND ($950.01 AND OVER)", "Age Group": "25\u201334", "Count": 152}, {"Crm Cd Desc": "THEFT FROM MOTOR VEHICLE - GRAND ($950.01 AND OVER)", "Age Group": "35\u201349", "Count": 143}, {"Crm Cd Desc": "THEFT FROM MOTOR VEHICLE - GRAND ($950.01 AND OVER)", "Age Group": "50\u201364", "Count": 87}, {"Crm Cd Desc": "THEFT FROM MOTOR VEHICLE - GRAND ($950.01 AND OVER)", "Age Group": "65+", "Count": 31}, {"Crm Cd Desc": "THEFT OF IDENTITY", "Age Group": "0\u201317", "Count": 3}, {"Crm Cd Desc": "THEFT OF IDENTITY", "Age Group": "18\u201324", "Count": 55}, {"Crm Cd Desc": "THEFT OF IDENTITY", "Age Group": "25\u201334", "Count": 148}, {"Crm Cd Desc": "THEFT OF IDENTITY", "Age Group": "35\u201349", "Count": 167}, {"Crm Cd Desc": "THEFT OF IDENTITY", "Age Group": "50\u201364", "Count": 84}, {"Crm Cd Desc": "THEFT OF IDENTITY", "Age Group": "65+", "Count": 45}, {"Crm Cd Desc": "THEFT PLAIN - PETTY ($950 & UNDER)", "Age Group": "0\u201317", "Count": 10}, {"Crm Cd Desc": "THEFT PLAIN - PETTY ($950 & UNDER)", "Age Group": "18\u201324", "Count": 148}, {"Crm Cd Desc": "THEFT PLAIN - PETTY ($950 & UNDER)", "Age Group": "25\u201334", "Count": 257}, {"Crm Cd Desc": "THEFT PLAIN - PETTY ($950 & UNDER)", "Age Group": "35\u201349", "Count": 235}, {"Crm Cd Desc": "THEFT PLAIN - PETTY ($950 & UNDER)", "Age Group": "50\u201364", "Count": 83}, {"Crm Cd Desc": "THEFT PLAIN - PETTY ($950 & UNDER)", "Age Group": "65+", "Count": 39}, {"Crm Cd Desc": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS)", "Age Group": "0\u201317", "Count": 0}, {"Crm Cd Desc": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS)", "Age Group": "18\u201324", "Count": 66}, {"Crm Cd Desc": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS)", "Age Group": "25\u201334", "Count": 153}, {"Crm Cd Desc": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS)", "Age Group": "35\u201349", "Count": 194}, {"Crm Cd Desc": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS)", "Age Group": "50\u201364", "Count": 90}, {"Crm Cd Desc": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS)", "Age Group": "65+", "Count": 36}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
