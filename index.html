@@ -1,51 +1,97 @@
+
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
   <meta charset='UTF-8'>
   <title>Ved & Cole DS4200 Project</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #005599;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0.8rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #0077cc;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    iframe, img {
+      margin-top: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    h2, h3 {
+      margin-top: 2rem;
+    }
+  </style>
 </head>
-
 <body>
-  <h1>
-    DS4200 Project
-  </h1>
-  <h1>
-    Ved Agrawal & Cole Christiana
-  </h1>
 
-  <h2>
-    Is There a Correlation Between 
-    Crime Type and Victim Age and Gender in LA?
-  </h2>
+<header>
+  <h1>DS4200 Project: Crime in LA</h1>
+  <h2>Ved Agrawal & Cole Christiana</h2>
+</header>
 
-  <h3>
-    Introduction to Project
-  </h3>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="crimemap.html">Crime Map</a>
+  <a href="barplot.html">Bar Plot</a>
+  <a href="d3_sankey.html">Sankey Diagram</a>
+  <a href="boxplot.html">Boxplot</a>
+  <a href="sunburst.html">Sunburst</a>
+</nav>
+
+<section>
+  <h2>Is There a Correlation Between Crime Type and Victim Age and Gender in LA?</h2>
+  <h3>Introduction to Project</h3>
   <p>
-    Crime is frequently influenced by demographic 
-    factors such as age and gender. This indicates 
-    the significance of understanding the relationship 
-    between crime type and victim age and gender in any 
-    city, to yield insights into strategies and initiatives 
-    to enforce the law and prevent crime. Notable examples 
-    of crime type affecting certain demographics include 
-    scamming disproportionately affecting older populations 
-    and violence affecting younger populations. Likewise, 
-    males and females may experience different crimes at 
-    differing rates. By analyzing crime data in Los Angeles, 
-    we can identify patterns that help policymakers and 
-    law enforcement create solutions and better allocate 
-    resources. Moreover, understanding these correlations 
-    sheds light on potential vulnerabilities of different 
-    demographics and deepens our knowledge of the social 
-    dynamics influencing crime.
+    Crime is frequently influenced by demographic factors 
+    such as age and gender. This indicates the significance
+     of understanding the relationship between crime type 
+     and victim age and gender in any city, to yield insights
+      into strategies and initiatives to enforce the law 
+      and prevent crime. Notable examples of crime type 
+      affecting certain demographics include scamming 
+      disproportionately affecting older populations and 
+      violence affecting younger populations. Likewise, 
+      males and females may experience different crimes 
+      at differing rates. By analyzing crime data in Los 
+      Angeles, we can identify patterns that help policymakers 
+      and law enforcement create solutions and better allocate 
+      resources. Moreover, understanding these correlations 
+      sheds light on potential vulnerabilities of different 
+      demographics and deepens our knowledge of the social 
+      dynamics influencing crime.
   </p>
 
-  <h3>
-    Introduction to Data
-  </h3>
+  <h3>Introduction to Data</h3>
   <p>
     This LA crime dataset is sourced from the U.S. 
     Government’s Data Catalog and contains 9,999 
@@ -55,44 +101,42 @@
     This dataset provides information on crime incidents, 
     including but not limited to report numbers, dates, 
     times, geographical location, crime type, descriptions, 
-    classifications, victim age, victim gender, victim 
-    ethnicity, and weapon involvement, across 29 columns 
-    of data using a variety of data types (integers, floats, 
-    and strings), making it a helpful resource for analyzing 
-    crime in Los Angeles to provide insights for policymakers 
-    and law enforcement.
+    classifications, victim age, victim gender, 
+    victim ethnicity, and weapon involvement, 
+    across 29 columns of data using a variety of data 
+    types (integers, floats, and strings), making it a 
+    helpful resource for analyzing crime in Los Angeles 
+    to provide insights for policymakers and law enforcement.
   </p>
 
-  <h3>
-    References
-  </h3>
-  <a href="https://www.sciencedirect.com/science/article/pii/S2666518223000165">
-    Attitudes toward crime(s) and their relations to 
-    gender, age, and personal values
-  </a>
-  <p></p>
-  <a href="https://journals.sagepub.com/doi/10.1177/17488958241242643?icid=int.sj-abstract.citing-articles.6">
-    Exploring the effects of age and gender on the 
-    relationship between psychological distance and worry about crime
-  </a>
+  <h3>References</h3>
+  <ul>
+    <li><a href="https://www.sciencedirect.com/science/article/pii/S2666518223000165" target="_blank">
+      Attitudes toward crime(s) and their relations to gender, age, and personal values</a></li>
+    <li><a href="https://journals.sagepub.com/doi/10.1177/17488958241242643?icid=int.sj-abstract.citing-articles.6" target="_blank">
+      Exploring the effects of age and gender on the relationship between psychological distance and worry about crime</a></li>
+  </ul>
 
-  <h3>
-    Visualizations
-  </h3>
-  <iframe src="crimemap.html" width="100%" height="600" frameborder="0"></iframe>
-  <iframe src="barplot.html" width="100%" height="600" frameborder="0"></iframe>
-  <iframe src="d3_sankey.html" width="100%" height="600" frameborder="0"></iframe>
-  <img src="boxplot.png" width="100%" height="600" frameborder="0"/>
-  <iframe src="sunburst.html" width="100%" height="600" frameborder="0"></iframe>
-
-  <h3>
-    Conclusion
-  </h3>
+  <h3>Conclusion</h3>
   <p>
-    [conclusion]
+    Our project analyzed several patterns in how crime in 
+    Los Angeles impacts different demographic groups. Our 
+    analysis illustrated that theft, assault, and vandalism were 
+    the most common crimes, where younger individuals were more 
+    frequently victims. Also, geographic analysis showed 
+    clustering in certain parts of the city, more of which 
+    were centered around downtown. Gender-based patterns also 
+    emerged, with females appearing more often in crimes 
+    related to sexual violence, while males were more involved 
+    in physical crimes such as assault and property damage. 
+    Overall, the visualizations made these patterns easier 
+    to understand and helped highlight the uneven distribution 
+    of crime across gender, age, and geography. For future work, 
+    we could find deeper insights by incorporating time-based 
+    trends, neighborhood-level socioeconomic data, and changes 
+    in patterns over multiple years.
   </p>
+</section>
 
-  <script src='https://d3js.org/d3.v7.min.js'></script>
-  <script src='main.js'></script>
 </body>
 </html>
