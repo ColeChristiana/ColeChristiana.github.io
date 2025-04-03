@@ -47,6 +47,20 @@
     <a href="boxplot.html" style="color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 5px;">4. Victim Age Distribution by Crime Category & Gender</a>
     <a href="sunburst.html" style="color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 5px;">5. Crime Breakdown by Type, Gender, and Age</a>
   </nav>
+  <h2>
+    Instructions
+  </h2>
+  <p>
+    The Sankey diagram visualizes the flow of data 
+    from one category to another—in this case, from 
+    victim gender to crime type. The width of each 
+    flow line represents the number of cases, allowing 
+    users to immediately see which gender is more 
+    associated with certain crimes. Hovering over each 
+    stream reveals exact counts, making it a powerful 
+    tool for comparing how different demographics connect 
+    to various offenses.
+  </p>
 
 
 <h2>Victim Gender to Crime Type - Sankey Diagram</h2>
@@ -143,20 +157,6 @@
       .attr("x", d => d.x1 + 6)
       .attr("text-anchor", "start");
 </script>
-<h2>
-  Instructions
-</h2>
-<p>
-  The Sankey diagram visualizes the flow of data 
-  from one category to another—in this case, from 
-  victim gender to crime type. The width of each 
-  flow line represents the number of cases, allowing 
-  users to immediately see which gender is more 
-  associated with certain crimes. Hovering over each 
-  stream reveals exact counts, making it a powerful 
-  tool for comparing how different demographics connect 
-  to various offenses.
-</p>
 
 </body>
 </html>
